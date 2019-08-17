@@ -33,7 +33,7 @@ RUN set -o errexit -o nounset -o pipefail;\
 \
         #for drupal/core
         php7-gd\
-        php7-pdo_mysql\
+        php7-pdo_pgsql\
         php7-session\
         php7-simplexml\
         php7-xml\
@@ -46,7 +46,7 @@ RUN set -o errexit -o nounset -o pipefail;\
         php7-opcache\
 \
         #Non-PHP dependency for drush/drush (sql:cli)
-        mysql-client\
+        postgresql-client\
 \
         #PHP extensions for for contrib modules:
 \
