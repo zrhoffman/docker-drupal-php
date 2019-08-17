@@ -50,6 +50,9 @@ RUN set -o errexit -o nounset -o pipefail;\
 \
         #PHP extensions for for contrib modules:
 \
+        #for memcache
+        php7-memcached\
+\
         #for maserminds/html5
         php7-ctype\
 \
