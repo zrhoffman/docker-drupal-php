@@ -9,6 +9,11 @@ RUN set -o errexit -o nounset -o pipefail;\
     #necessary to avoid https://github.com/Yelp/dumb-init/issues/73
     apk upgrade --no-cache;\
 \
+    #Avoids
+    #`WARNING: Ignoring APKINDEX.b53994b4.tar.gz: No such file or directory`
+    #https://github.com/gliderlabs/docker-alpine/issues/207#issuecomment-241308729
+    apk update;\
+\
     apk add --no-cache\
         php7-fpm\
 \
