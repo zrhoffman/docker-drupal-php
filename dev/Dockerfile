@@ -80,7 +80,10 @@ RUN set -o errexit -o nounset -o pipefail;\
     wget -O - 'https://getcomposer.org/installer' |\
         php -- --install-dir=/usr/local/bin --filename=composer;\
 \
-    echo 'alias drush=./vendor/bin/drush;' >> /etc/profile;\
+    {\
+        echo 'alias drupal=./vendor/bin/drupal;';\
+        echo 'alias drush=./vendor/bin/drush;';\
+    }  >> /etc/profile;\
 \
     adduser\
         --disabled-password\
