@@ -59,7 +59,7 @@ RUN set -o errexit -o nounset -o pipefail;\
         #for typo3/phar-stream-wrapper
         php7-fileinfo\
 \
-        #for cweagans/composer-patches
+        #Non-PHP dependency for cweagans/composer-patches
         patch\
     ;\
 \
